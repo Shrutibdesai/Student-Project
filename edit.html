@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   
+</head>
+<body>
+   <h1 style=font-family:Arial, Helvetica, sans-serif">Book Project</h1>
+   <a href="/"style=font-family:Arial, Helvetica, sans-serif">Home</a>
+   <a href="/add/" style=font-family:Arial, Helvetica, sans-serif" >Add Student</a>
+   <a href="/list/" style=font-family:Arial, Helvetica, sans-serif">Stufents</a>
+  
+
+   <h1>Update Book</h1>
+   <form action="/edit/{{ book.id }}" method="post" >
+      {% csrf_token %}
+      <table border="2" style="margin-left:auto; margin-right: auto;">
+         <!-- Table content -->
+
+         <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" value="{{ student.name }}"></td>
+         </tr>
+         <tr>
+            <td>Email</td>
+            <td><input type="text" name="email" value="{{ student.email }}"></td>
+         </tr>
+         <tr>
+            <td>contact</td>
+            <td><input type="text" name="contact" value="{{ student.contact }}"></td>
+         </tr>
+         <tr>
+            <td>course</td>
+            <td><input type="text" name="course" value="{{ student.course }}"></td>
+         </tr>
+         <tr>
+            <th colspan="2"><input type="submit" value="Update  Student"></th>
+         </tr>
+      </table>
+   </form>
+</body>
+</html>
